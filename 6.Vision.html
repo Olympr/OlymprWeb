@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./img/Chido.png" type="png">
+    <style>
+    body {
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+    /* Estilos del encabezado y del menú */
+        .menu-header {
+            width: 100%;
+            background-color: rgb(211, 0, 1);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            width: 60px;
+        }
+
+        .carrito img {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        /* Estilos del menú hamburguesa */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px;
+        }
+
+        /* Estilos de la barra lateral */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #ffffff;
+            transition: right 0.3s ease;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+            font-size: 15px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 10px 20px;
+        }
+
+        .sidebar a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+            background-color: rgba(255, 0, 0, 0.644);
+        }
+        /* Estilos para el botón de cierre */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #ff0000;
+        }
+        /* Estilos para el pie de página */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 100%; /* Asegurarse de que el footer cubra todo el ancho */
+            box-sizing: border-box; /* Para incluir padding en el ancho total */
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+        }
+
+        .footer-section img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .footer-section .social-icons img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .footer-section .policies {
+            font-size: 12px;
+        }
+        /*estilos el cuerpo de la pagina */
+        h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      color: black;
+    }
+
+    .plazo {
+      margin-bottom: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .plazo img {
+      width: 150px;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .plazo-content {
+      padding: 20px;
+    }
+
+    .plazo:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #ff0008;
+    }
+        </style>
+    <title></title>
+</head>
+<body>
+    <!-- Encabezado de pagina -->
+    <header class="menu-header">
+        <div class="logo">
+            <img src="./img/La buena.png" alt="Logo">
+        </div>
+        <div class="spacer"></div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <!-- Menu de pagina -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">X</div>
+        <ul>
+            <li><a href="./index.html">Menu</a></li>
+            <li><a href="1.Quienes somo.html">Quienes somos</a></li>
+            <li><a href="2.un mundo mejor.html">Un mejor mundo</a></li>
+            <li><a href="3.Innovacion.html">Innovacion</a></li>
+            <li><a href="4.Politicas.html">Politicas</a></li>
+            <li><a href="4.Politicas.html">Mision</a></li>
+            <li><a href="6.Vision.html">Vision</a></li>
+            <li><a href="7.Valores.html">Valores</a></li>
+            <li><a href="8.Contacto.html">Contacto</a></li>
+            <li><a href="9.Visitanos.html">Visitanos</a></li>
+            <li><a href="10.Productos o servicios.html">Productos y Servicios</a></li>
+            <li><a href="11.historia.html">Historia</a></li>
+            <li><a href="12.Logotipo.html">Logotipo</a></li>
+            <li><a href="13.Carrito.html"><img src="./img/carrito.png" alt="" width="20" height="20"></a></li>
+        </ul>
+    </div>
+    <script>
+        // Selección de elementos del DOM
+        var hamburgerMenu = document.getElementById("hamburger-menu");
+        var sidebar = document.getElementById("sidebar");
+        var closeBtn = document.getElementById("close-btn");
+
+        // Evento para abrir/cerrar el menú lateral
+        hamburgerMenu.addEventListener("click", function() {
+            if (sidebar.style.right === "0px") {
+                sidebar.style.right = "-250px";
+            } else {
+                sidebar.style.right = "0px";
+            }
+        });
+
+        // Evento para cerrar el menú lateral
+        closeBtn.addEventListener("click", function() {
+            sidebar.style.right = "-250px";
+        });
+    </script>
+    <!--cuerpo de la pagina russo no se te olvide -->
+    <h1 style="text-align: center;">Vision</h1>
+    <main>
+        <section class="plazo">
+          <img src="./img/AI_Generated_Image_2024-06-18_456423865027201.png" alt="Corto Plazo">
+          <div class="plazo-content">
+            <h2>Corto Plazo</h2>
+            <p>Ser la aplicación con mayor servicio fitness de todo México brindando la mejor capacitación a nuestros usuarios con ayuda de nuestras funciones para darles planes de entrenamiento personalizados y dietas. Popularizar la aplicación integrando una interfaz agradable para los usuarios y utilizando métodos de publicidad para seguir atrayendo más usuarios.</p>
+          </div>
+        </section>
+        <section class="plazo">
+          <img src="./img/hombres y mujeres musculosos en un gimnasio.jpg" alt="Mediano Plazo">
+          <div class="plazo-content">
+            <h2>Mediano Plazo</h2>
+            <p>Alcanzar un desarrollo total de la aplicación integrando y mejorando el uso de los servicios integrados a nuestra aplicación, innovar funciones para que los usuarios se les facilite el uso de esta. Tener un número de 50 mil usuarios activos integrando funciones las cuales permiten que los usuarios les sea agradable y fácil de usar con ayuda de encuestas para así adaptarse a nuestros usuarios.</p>
+          </div>
+        </section>
+        <section class="plazo">
+          <img src="./img/personas musculosas creando ropa.jpg" alt="Largo Plazo">
+          <div class="plazo-content">
+            <h2>Largo Plazo</h2>
+            <p>Extender la aplicación internacionalmente, creando las condiciones necesarias para operar en el mercado internacional. Expandir el mercado de nuestra empresa, creando mercancía como playeras, shorts, joggers, tops, botellas y suplementos alimenticios, esto para la obtención de ingresos extras.</p>
+          </div>
+        </section>
+      </main>
+    <footer>
+        <div class="footer-section">
+             <center><img src="./img/Chido.png" alt="Logo"></center>
+        </div>
+        <hr>
+        <div class="footer-section">
+            <h2>Contactanos</h2>
+            <p>Allende  pte,  Av.  Ignacio  Allende  180,  entre  Querétaro  y  Durango,  Centro,  63000  Tepic, Nayarit, Mexico. </p>
+            <p>Teléfono: +1234567890</p>
+            <div class="social-icons">
+                <img src="./img/facebook.png" alt="Facebook">
+                <img src="./img/x.avif" alt="Twitter">
+                <img src="./img/instagram.webp" alt="Instagram">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2>Visítanos</h2>
+            <div class="map">
+                <img src="./img/ubi.png" alt="" >
+            </div>
+            <br>
+        </div>
+        <hr>
+        <div class="footer-section">
+          <h2>Políticas</h2>
+          <p class="policies">
+              TÉRMINOS Y CONDICIONES GENERALES PARA PROMOCIONES Y COMPRAS EN PÁGINA WEB:<br><br>
+    
+              - Si te inscribes del día 5 al 14 tu pago se realizará el 1ro del próximo mes.<br>
+              - Si te inscribes del día 15 al 24 tu pago se realizará el día 10 del próximo mes.<br>
+              - Si te inscribes del día 25 al 4 tu pago se realizará el día 20 del próximo mes.<br>
+              - Plan VIP. Acceso hasta 5 invitados a entrenar por mes.<br>
+              - Las promociones no son transferibles a terceros.<br>
+              - Las promociones no son acumulables.<br>
+              - Solo aplican para usuarios sin adeudos previos.<br>
+              - No podrán registrarse por internet personas menores de 18 años, quienes por normatividad y capacidad legal no lo tienen permitido. Acércate a la recepción de tu Smart Fit favorito para conocer más opciones.<br>
+              - En caso de proporcionar información errónea o incorrecta para acceder a una promoción la misma será cancelada.<br>
+              - Las promociones aplican solo para territorio mexicano.<br>
+              - La aceptación del Usuario al participar en cualquiera de las promociones, implica el conocimiento y su consentimiento expreso y sin reservas de los Términos y Condiciones específicos para dicha promoción.<br>
+              - En ningún caso las promociones serán sustituidas por dinero en efectivo.<br>
+          </p>
+        </div>
+    </footer>
+</body>
+</html>

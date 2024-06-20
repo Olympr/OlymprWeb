@@ -1,0 +1,225 @@
+/* Estilos para el cuerpo */
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+/* Estilos para el encabezado del menú */
+.menu-header {
+    width: 100%;
+    background-color: rgb(211, 0, 1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el logo */
+.logo img {
+    width: 60px;
+}
+
+/* Estilos para el carrito de compras */
+.carrito img {
+    width: 40px;
+    cursor: pointer;
+}
+
+/* Estilos para el espacio flexible */
+.spacer {
+    flex-grow: 1;
+}
+
+/* Estilos para el contenedor principal */
+.container1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Estilos para la imagen principal */
+.full-image {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid black;
+}
+
+/* Estilos para el contenedor de la tabla */
+.tablacontenedor {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para resaltar filas en la tabla */
+.highlight {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el contenedor de imágenes */
+.imagencontenedor {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilos para los contenedores de imagen */
+.imgc {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+/* Estilos para las imágenes */
+.image {
+    display: block;
+    width: 100%;
+}
+
+/* Estilos para el texto sobre las imágenes */
+.text {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos al pasar el ratón por encima de las imágenes */
+.imgc:hover {
+    border: 2px solid red;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.footer-section .social-icons img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.footer-section .policies {
+    font-size: 12px;
+}
+
+/* Estilos para los titulos */
+.titulos{
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .bordes{
+    border: 10px solid black;
+  }
+
+
+
+  /* Estilos para el menú de hamburguesa */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px 20px;
+}
+
+.sidebar a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 0, 0, 0.644);
+}
+
+
+/* Estilos para el botón de cierre del menu de hamburgesa*/
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff0000;
+}

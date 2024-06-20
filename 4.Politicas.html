@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./img/Chido.png" type="png">
+    <style>
+        body {
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+    /* Estilos del encabezado y del menú */
+        .menu-header {
+            width: 100%;
+            background-color: rgb(211, 0, 1);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            width: 60px;
+        }
+
+        .carrito img {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        /* Estilos del menú hamburguesa */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px;
+        }
+
+        /* Estilos de la barra lateral */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #ffffff;
+            transition: right 0.3s ease;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 10px 20px;
+        }
+
+        .sidebar a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+            background-color: rgba(255, 0, 0, 0.644);
+        }
+        /* Estilos para el pie de página */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 100%; /* Asegurarse de que el footer cubra todo el ancho */
+            box-sizing: border-box; /* Para incluir padding en el ancho total */
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+        }
+
+        .footer-section img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .footer-section .social-icons img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .footer-section .policies {
+            font-size: 12px;
+        }
+        /*estilos el cuerpo de la pagina */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .content {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        </style>
+    <title></title>
+</head>
+<body>
+    <!-- Encabezado de pagina -->
+    <header class="menu-header">
+        <div class="logo">
+            <img src="./img/La buena.png" alt="Logo">
+        </div>
+        <div class="spacer"></div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <!-- Menu de pagina -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">X</div>
+        <ul>
+            <li><a href="./index.html">Menu</a></li>
+      <li><a href="1.Quienes somo.html">Quienes somos</a></li>
+      <li><a href="2.un mundo mejor.html">Un mejor mundo</a></li>
+      <li><a href="3.Innovacion.html">Innovacion</a></li>
+      <li><a href="4.Politicas.html">Politicas</a></li>
+      <li><a href="5.Mision.html">Mision</a></li>
+      <li><a href="6.Vision.html">Vision</a></li>
+      <li><a href="7.Valores.html">Valores</a></li>
+      <li><a href="8.Contacto.html">Contacto</a></li>
+      <li><a href="9.Visitanos.html">Visitanos</a></li>
+      <li><a href="10.Productos o servicios.html">Productos y Servicios</a></li>
+      <li><a href="11.historia.html">Historia</a></li>
+      <li><a href="12.Logotipo.html">Logotipo</a></li>
+      <li><a href="13.Carrito.html"><img src="./img/carrito.png" alt="" width="20" height="20"></a></li>
+        </ul>
+    </div>
+    <script>
+        // Selección de elementos del DOM
+        var hamburgerMenu = document.getElementById("hamburger-menu");
+        var sidebar = document.getElementById("sidebar");
+        var closeBtn = document.getElementById("close-btn");
+
+        // Evento para abrir/cerrar el menú lateral
+        hamburgerMenu.addEventListener("click", function() {
+            if (sidebar.style.right === "0px") {
+                sidebar.style.right = "-250px";
+            } else {
+                sidebar.style.right = "0px";
+            }
+        });
+
+        // Evento para cerrar el menú lateral
+        closeBtn.addEventListener("click", function() {
+            sidebar.style.right = "-250px";
+        });
+    </script>
+    <div class="container">
+        <div class="content">
+            <h2>Horario</h2>
+            <ul>
+                <li>Cumplir con puntualidad y responsabilidad los horarios asignados.</li>
+                <li>Tomar los descansos asignados sin exceder el mismo.</li>
+                <li>En caso de no poder cumplir con el horario, avisar y justificar.</li>
+            </ul>
+
+            <h2>Uniforme</h2>
+            <ul>
+                <li>El uniforme asignado debe ser usado en todo momento durante las horas de trabajo.</li>
+                <li>El uniforme debe estar limpio y en buen estado.</li>
+                <li>Los empleados deberan portar su gafet en todo el horario de trabajo.</li>
+                <li>Cuidar la imagen personal.</li>
+            </ul>
+
+            <h2>Normas de Higiene</h2>
+            <ul>
+                <li>Las áreas de trabajo deben mantenerse limpias y ordenadas.</li>
+                <li>El uso de desinfectantes de manos es obligatorio antes de ingresar a las instalaciones.</li>
+                <li>Limpiar el area de comida y descansos de ser necesario.</li>
+                <li>No tirar los desechos al suelo.</li>
+                <li>Cumplir con las especificaciones en los baños.</li>
+            </ul>
+
+            <h2>Uso Correcto de Instalaciones</h2>
+            <ul>
+                <li>Las instalaciones de computo deberan ser utilizadas unicamente para fines laborales.</li>
+                <li>Se debe evitar el consumo de alimentos en las áreas de trabajo, salvo en las áreas designadas.</li>
+                <li>El equipo y materiales de la empresa deben ser manejados con cuidado.</li>
+                <li>Mantener el orden en zonas de trabajo.</li>
+                <li>Evitar poner musica a un volumen alto, de preferencia usar audifonos</li>
+                <li>No hacer deportes ni juegos bruscos en las zonas de trabajo.</li>
+            </ul>
+
+            <h2>Protocolos de Seguridad</h2>
+            <ul>
+                <li>Todos los empleados deben conocer y seguir los procedimientos de evacuación en caso de emergencia.</li>
+                <li>Reportar inmediatamente cualquier situación peligrosa al supervisor correspondiente.</li>
+                <li>Antes de ingresar al area de trabajo, se hara una inspeccion completa.</li>
+                <li>Evitar traer consigo objetos que puedan atentar con la integridad de los demas.</li>
+            </ul>
+
+            <h2>Cumplimiento de Tareas</h2>
+            <ul>
+                <li>Se espera que los empleados cumplan con las tareas asignadas en los plazos establecidos.</li>
+                <li>Cualquier dificultad para completar una tarea debe ser comunicada al supervisor inmediatamente.</li>
+                <li>El rendimiento será evaluado periódicamente para asegurar el cumplimiento de objetivos.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-section">
+             <center><img src="./img/Chido.png" alt="Logo"></center>
+        </div>
+        <hr>
+        <div class="footer-section">
+            <h2>Contactanos</h2>
+            <p>Allende  pte,  Av.  Ignacio  Allende  180,  entre  Querétaro  y  Durango,  Centro,  63000  Tepic, Nayarit, Mexico. </p>
+            <p>Teléfono: +1234567890</p>
+            <div class="social-icons">
+                <img src="./img/facebook.png" alt="Facebook">
+                <img src="./img/x.avif" alt="Twitter">
+                <img src="./img/instagram.webp" alt="Instagram">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2>Visítanos</h2>
+            <div class="map">
+                <img src="./img/ubi.png" alt="" >
+            </div>
+            <br>
+        </div>
+        <hr>
+        <div class="footer-section">
+          <h2>Políticas</h2>
+          <p class="policies">
+              TÉRMINOS Y CONDICIONES GENERALES PARA PROMOCIONES Y COMPRAS EN PÁGINA WEB:<br><br>
+    
+              - Si te inscribes del día 5 al 14 tu pago se realizará el 1ro del próximo mes.<br>
+              - Si te inscribes del día 15 al 24 tu pago se realizará el día 10 del próximo mes.<br>
+              - Si te inscribes del día 25 al 4 tu pago se realizará el día 20 del próximo mes.<br>
+              - Plan VIP. Acceso hasta 5 invitados a entrenar por mes.<br>
+              - Las promociones no son transferibles a terceros.<br>
+              - Las promociones no son acumulables.<br>
+              - Solo aplican para usuarios sin adeudos previos.<br>
+              - No podrán registrarse por internet personas menores de 18 años, quienes por normatividad y capacidad legal no lo tienen permitido. Acércate a la recepción de tu Smart Fit favorito para conocer más opciones.<br>
+              - En caso de proporcionar información errónea o incorrecta para acceder a una promoción la misma será cancelada.<br>
+              - Las promociones aplican solo para territorio mexicano.<br>
+              - La aceptación del Usuario al participar en cualquiera de las promociones, implica el conocimiento y su consentimiento expreso y sin reservas de los Términos y Condiciones específicos para dicha promoción.<br>
+              - En ningún caso las promociones serán sustituidas por dinero en efectivo.<br>
+          </p>
+        </div>
+    </footer>
+</body>
+</html>

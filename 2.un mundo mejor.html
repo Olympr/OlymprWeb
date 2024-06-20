@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./img/Chido.png" type="png">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    /* Estilos del encabezado y del menú */
+        .menu-header {
+            width: 100%;
+            background-color: rgb(211, 0, 1);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            width: 60px;
+        }
+
+        .carrito img {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        /* Estilos del menú hamburguesa */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 3px;
+        }
+
+        /* Estilos de la barra lateral */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #ffffff;
+            transition: right 0.3s ease;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow-y: auto;
+            font-size: 15px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 10px 20px;
+        }
+
+        .sidebar a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+            background-color: rgba(255, 0, 0, 0.644);
+        }
+        /* Estilos para el botón de cierre */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #ff0000;
+        }
+        /* Estilos para el pie de página */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 100%; /* Asegurarse de que el footer cubra todo el ancho */
+            box-sizing: border-box; /* Para incluir padding en el ancho total */
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+        }
+
+        .footer-section img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .footer-section .social-icons img {
+            width: 30px;
+            margin-right: 5px;
+        }
+
+        .footer-section .policies {
+            font-size: 12px;
+        }
+        /*estilos el cuerpo de la pagina */
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px;
+        }
+        .image-container img {
+            width: 30%;
+            height: auto;
+            border: 5px solid black;
+        }
+        </style>
+    <title></title>
+</head>
+<body>
+    <!-- Encabezado de pagina -->
+    <header class="menu-header">
+        <div class="logo">
+            <img src="./img/La buena.png" alt="Logo">
+        </div>
+        <div class="spacer"></div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <!-- Menu de pagina -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">X</div>
+        <ul>
+            <li><a href="./index.html">Menu</a></li>
+      <li><a href="1.Quienes somo.html">Quienes somos</a></li>
+      <li><a href="2.un mundo mejor.html">Un mejor mundo</a></li>
+      <li><a href="3.Innovacion.html">Innovacion</a></li>
+      <li><a href="4.Politicas.html">Politicas</a></li>
+      <li><a href="4.Politicas.html">Mision</a></li>
+      <li><a href="6.Vision.html">Vision</a></li>
+      <li><a href="7.Valores.html">Valores</a></li>
+      <li><a href="8.Contacto.html">Contacto</a></li>
+      <li><a href="9.Visitanos.html">Visitanos</a></li>
+      <li><a href="10.Productos o servicios.html">Productos y Servicios</a></li>
+      <li><a href="11.historia.html">Historia</a></li>
+      <li><a href="12.Logotipo.html">Logotipo</a></li>
+      <li><a href="13.Carrito.html"><img src="./img/carrito.png" alt="" width="20" height="20"></a></li>
+        </ul>
+    </div>
+    <script>
+        // Selección de elementos del DOM
+        var hamburgerMenu = document.getElementById("hamburger-menu");
+        var sidebar = document.getElementById("sidebar");
+        var closeBtn = document.getElementById("close-btn");
+
+        // Evento para abrir/cerrar el menú lateral
+        hamburgerMenu.addEventListener("click", function() {
+            if (sidebar.style.right === "0px") {
+                sidebar.style.right = "-250px";
+            } else {
+                sidebar.style.right = "0px";
+            }
+        });
+
+        // Evento para cerrar el menú lateral
+        closeBtn.addEventListener("click", function() {
+            sidebar.style.right = "-250px";
+        });
+    </script>
+    <main>
+        <section>
+            <h2>Nuestra Misión</h2>
+            <p>En nuestra empresa, creemos que es nuestra responsabilidad cuidar el planeta. Nos esforzamos por reducir
+                 nuestro impacto ambiental a través de diversas iniciativas y prácticas sostenibles.
+                 <div class="image-container">
+                    <img src = "./img/imagenes/huella.jpg">
+                    <img src = "./img/imagenes/unnamed-2.png">
+                </div>
+                </p>
+        </section>
+        <section>
+            <h2>Iniciativas Verdes</h2>
+            <p>Hemos implementado varias iniciativas para reducir nuestra huella de carbono, tales como el uso de energía
+                 renovable, la reducción de residuos y el reciclaje. Trabajamos continuamente para mejorar nuestros procesos
+                  y ser más eficientes:
+                <UL>
+                    <LI> Uso de paneles solares para reducir la emision de dioxido de carbono.
+                    <LI> implementacion de sistemas de recuperación de agua aprovechando las aguas de lluvia. 
+                    <LI> La instalación de jardines verticales en las fachadas y paredes de los edificios sirve de aislamiento, estos jardines purifican el aire, amortiguan el ruido en entornos urbanos y sirven de decoración.     
+                    </LI>
+                </UL>
+
+                <div class="image-container">
+                    <img src="./img/imagenes/paneles.webp" alt="Descripción de la imagen 1">
+                    <img src="./img/imagenes/recoleccion.webp" alt="Descripción de la imagen 2">
+                    <img src="./img/imagenes/jardin.jpg" alt="Descripción de la imagen 3">
+                </div>
+                </p>
+        </section>
+        <section>
+            <h2>Proyectos Comunitarios</h2>
+            <p>Nos involucramos en proyectos comunitarios que promueven la sostenibilidad ambiental. Esto incluye la 
+                plantación de árboles, la limpieza de áreas naturales al aire libre, apoyo en la compra de contenedores
+                para la separacion de basura entre otros. </p>
+        </section>
+        <section>
+            <h2>Innovación y Tecnología</h2>
+            <p>Utilizamos la innovación y la tecnología para desarrollar productos y servicios que son menos dañinos 
+                para el medio ambiente. Nuestro equipo de investigación y desarrollo está constantemente buscando 
+                nuevas formas de ser más sostenibles.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-section">
+             <center><img src="./img/Chido.png" alt="Logo"></center>
+        </div>
+        <hr>
+        <div class="footer-section">
+            <h2>Contactanos</h2>
+            <p>Allende  pte,  Av.  Ignacio  Allende  180,  entre  Querétaro  y  Durango,  Centro,  63000  Tepic, Nayarit, Mexico. </p>
+            <p>Teléfono: +1234567890</p>
+            <div class="social-icons">
+                <img src="./img/facebook.png" alt="Facebook">
+                <img src="./img/x.avif" alt="Twitter">
+                <img src="./img/instagram.webp" alt="Instagram">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2>Visítanos</h2>
+            <div class="map">
+                <img src="./img/ubi.png" alt="" >
+            </div>
+            <br>
+        </div>
+        <hr>
+        <div class="footer-section">
+          <h2>Políticas</h2>
+          <p class="policies">
+              TÉRMINOS Y CONDICIONES GENERALES PARA PROMOCIONES Y COMPRAS EN PÁGINA WEB:<br><br>
+    
+              - Si te inscribes del día 5 al 14 tu pago se realizará el 1ro del próximo mes.<br>
+              - Si te inscribes del día 15 al 24 tu pago se realizará el día 10 del próximo mes.<br>
+              - Si te inscribes del día 25 al 4 tu pago se realizará el día 20 del próximo mes.<br>
+              - Plan VIP. Acceso hasta 5 invitados a entrenar por mes.<br>
+              - Las promociones no son transferibles a terceros.<br>
+              - Las promociones no son acumulables.<br>
+              - Solo aplican para usuarios sin adeudos previos.<br>
+              - No podrán registrarse por internet personas menores de 18 años, quienes por normatividad y capacidad legal no lo tienen permitido. Acércate a la recepción de tu Smart Fit favorito para conocer más opciones.<br>
+              - En caso de proporcionar información errónea o incorrecta para acceder a una promoción la misma será cancelada.<br>
+              - Las promociones aplican solo para territorio mexicano.<br>
+              - La aceptación del Usuario al participar en cualquiera de las promociones, implica el conocimiento y su consentimiento expreso y sin reservas de los Términos y Condiciones específicos para dicha promoción.<br>
+              - En ningún caso las promociones serán sustituidas por dinero en efectivo.<br>
+          </p>
+        </div>
+    </footer>
+</body>
+</html>
